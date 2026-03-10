@@ -4,7 +4,9 @@ from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain.agents import create_tool_calling_agent, AgentExecutor
+# from langchain.agents import create_tool_calling_agent, AgentExecutor
+from langchain_classic.agents import create_tool_calling_agent, AgentExecutor
+# from langchain.agents import create_react_agent, AgentExecutor
 from tools import search_tool, wiki_tool, save_tool
 
 load_dotenv()
@@ -16,7 +18,8 @@ class ResearchResponse(BaseModel):
     tools_used: list[str]
     
 
-llm = ChatAnthropic(model="claude-3-5-sonnet-20241022")
+# llm = ChatAnthropic(model="claude-3-5-sonnet-20241022")
+llm = ChatOpenAI(model="gpt-4-0613", temperature=0.2, max_tokens=1000)
 parser = PydanticOutputParser(pydantic_object=ResearchResponse)
 
 prompt = ChatPromptTemplate.from_messages(
