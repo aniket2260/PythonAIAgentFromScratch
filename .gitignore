@@ -1,14 +1,89 @@
+# Environment Variables and Credentials
 .env
-sample.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+config.json
+credentials.json
+api_keys.txt
+
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
 env/
 venv/
 ENV/
-Claude_API_Key.txt
-*.key
-*.secret
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv
+.virtualenv
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+coverage.xml
+*.cover
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE metadata
+.project
+.pydevproject
+.settings/
+
+# Logs
+*.log
+logs/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
