@@ -1,0 +1,14 @@
+.env
+sample.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+Claude_API_Key.txt
+*.key
+*.secret
+.DS_Store
